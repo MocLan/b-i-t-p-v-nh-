@@ -3,9 +3,24 @@ package com.lananh1.bai5.toptailieu;
 import java.util.Date;
 import java.util.Scanner;
 
-public class KhachHangVietNam extends  KhachHang {
+public class KhachHangVietNam extends KhachHang {
     private long donGia;
     private long dinhMuc;
+
+    public KhachHangVietNam(int maKhachHang, String hoVaTen, Date ngayRaHoaDon, long soDienTieuThu, long donGia, long dinhMuc) {
+        super(maKhachHang, hoVaTen, ngayRaHoaDon, soDienTieuThu);
+        this.donGia = donGia;
+        this.dinhMuc = dinhMuc;
+    }
+
+    public KhachHangVietNam() {
+        super();
+    }
+
+    public KhachHangVietNam(long donGia, long dinhMuc) {
+        this.donGia = donGia;
+        this.dinhMuc = dinhMuc;
+    }
 
     public long getDonGia() {
         return donGia;
@@ -20,20 +35,6 @@ public class KhachHangVietNam extends  KhachHang {
     }
 
     public void setDinhMuc(long dinhMuc) {
-        this.dinhMuc = dinhMuc;
-    }
-
-    public KhachHangVietNam(int maKhachHang, String hoVaTen, Date ngayRaHoaDon, long soDienTieuThu, long donGia, long dinhMuc) {
-        super(maKhachHang, hoVaTen, ngayRaHoaDon, soDienTieuThu);
-        this.donGia = donGia;
-        this.dinhMuc = dinhMuc;
-    }
-    public  KhachHangVietNam(){
-        super();
-    }
-
-    public KhachHangVietNam(long donGia, long dinhMuc) {
-        this.donGia = donGia;
         this.dinhMuc = dinhMuc;
     }
 
@@ -57,7 +58,7 @@ public class KhachHangVietNam extends  KhachHang {
 
     @Override
     public String toString() {
-        return "KhachHangVietNam{" +super.toString()+
+        return "KhachHangVietNam{" + super.toString() +
                 "donGia=" + donGia +
                 ", dinhMuc=" + dinhMuc +
                 '}';

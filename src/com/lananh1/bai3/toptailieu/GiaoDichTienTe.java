@@ -3,9 +3,19 @@ package com.lananh1.bai3.toptailieu;
 import java.util.Date;
 import java.util.Scanner;
 
-public class GiaoDichTienTe extends GiaoDich{
+public class GiaoDichTienTe extends GiaoDich {
     private float tiGia;
     private int x;
+
+    public GiaoDichTienTe() {
+        super();
+        this.tiGia = 2;
+
+    }
+
+    public GiaoDichTienTe(String maGiaoDich, Date ngayGiaoDich, long donGia, long soLuong) {
+        super(maGiaoDich, ngayGiaoDich, donGia, soLuong);
+    }
 
     public int getX() {
         return x;
@@ -21,16 +31,6 @@ public class GiaoDichTienTe extends GiaoDich{
 
     public void setTiGia(float tiGia) {
         this.tiGia = tiGia;
-    }
-
-    public GiaoDichTienTe(){
-        super();
-        this.tiGia = 2;
-
-    }
-
-    public GiaoDichTienTe(String maGiaoDich, Date ngayGiaoDich, long donGia, long soLuong) {
-        super(maGiaoDich, ngayGiaoDich, donGia, soLuong);
     }
 
     @Override
@@ -54,8 +54,7 @@ public class GiaoDichTienTe extends GiaoDich{
         if (x == 2) {
             thanhTien = this.getSoLuong() * getDonGia();
             return thanhTien;
-        }
-        else {
+        } else {
             return 0;
         }
 
@@ -63,7 +62,7 @@ public class GiaoDichTienTe extends GiaoDich{
 
     @Override
     public String toString() {
-        return "GiaoDichTienTe{" + super.toString()+
+        return "GiaoDichTienTe{" + super.toString() +
                 "tiGia=" + tiGia +
                 '}';
     }

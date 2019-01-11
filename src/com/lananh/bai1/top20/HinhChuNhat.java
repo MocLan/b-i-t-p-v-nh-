@@ -21,22 +21,25 @@ public class HinhChuNhat {
     public void setChieuRong(float chieuRong) {
         this.chieuRong = chieuRong;
     }
-//    public HinhChuNhat(){
+
+    //    public HinhChuNhat(){
 //        this.chieuDai = getChieuDai();
 //        this.chieuRong = getChieuRong();
 //    }
-    public void nhapHinhChuNhat(){
+    public void nhapHinhChuNhat() {
         System.out.println("nhập vào chiều dài: ");
         chieuDai = new Scanner(System.in).nextFloat();
         System.out.println("nhập vào chiều rộng: ");
         chieuRong = new Scanner(System.in).nextFloat();
 
     }
-    public float tinhDienTich(){
-        return chieuDai* chieuRong;
+
+    public float tinhDienTich() {
+        return chieuDai * chieuRong;
     }
-    public  float tinhChuVi(){
-        return (chieuDai+chieuRong)*2;
+
+    public float tinhChuVi() {
+        return (chieuDai + chieuRong) * 2;
     }
 
 
@@ -45,8 +48,8 @@ public class HinhChuNhat {
         return "HinhChuNhat{" +
                 "chieuDai=" + chieuDai +
                 ", chieuRong=" + chieuRong +
-                ",dientich=" + tinhDienTich()+
-                ",chuvi="+tinhChuVi()+
+                ",dientich=" + tinhDienTich() +
+                ",chuvi=" + tinhChuVi() +
                 '}';
     }
 }

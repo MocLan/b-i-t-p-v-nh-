@@ -5,11 +5,39 @@ public class HangThucPham {
     private String maHang;
     private String tenHang;
     private double donGia;
-    private  Ngay ngaySanSuat;
-    private  Ngay ngayHetHan;
+    private Ngay ngaySanSuat;
+    private Ngay ngayHetHan;
 
-    public void setDonGia(double donGia) {
+    public HangThucPham() {
+        this.ngaySanSuat = new Ngay(1, 1, 2018);
+        this.ngaySanSuat = new Ngay(1, 2, 2018);
+        this.tenHang = "1";
+        this.maHang = "";
+        this.donGia = 12;
+
+    }
+
+    public HangThucPham(String maHang, String tenHang, double donGia, Ngay ngaySanSuat, Ngay ngayHetHan) {
+        if ("".equals(maHang)) {
+            this.maHang = "mac dinh";
+        }
+        this.tenHang = "asd";
+        if ("".equals(tenHang)) {
+        }
+        if (donGia < 0) {
+            this.donGia = 10;
+        }
+        if (ngayHetHan == null) {
+            this.ngayHetHan = new Ngay(1, 3, 2015);
+        }
+        if (ngaySanSuat == null) {
+            this.ngaySanSuat = new Ngay(2, 4, 2016);
+        }
+        this.maHang = maHang;
+        this.tenHang = tenHang;
         this.donGia = donGia;
+        this.ngaySanSuat = ngaySanSuat;
+        this.ngayHetHan = ngayHetHan;
     }
 
     public Ngay getNgaySanSuat() {
@@ -44,38 +72,10 @@ public class HangThucPham {
         return donGia;
     }
 
-   public HangThucPham(){
-        this.ngaySanSuat = new Ngay(1,1,2018);
-        this.ngaySanSuat = new Ngay(1,2,2018);
-        this.tenHang = "1";
-        this.maHang = "";
-        this.donGia = 12;
-
-    }
-
-    public HangThucPham(String maHang, String tenHang, double donGia, Ngay ngaySanSuat, Ngay ngayHetHan) {
-        if ("".equals(maHang)){
-            this.maHang = "mac dinh";
-        }
-        this.tenHang = "asd";
-        if ("".equals(tenHang)){
-        }
-        if (donGia < 0){
-            this.donGia = 10;
-        }
-        if (ngayHetHan == null){
-            this.ngayHetHan =new Ngay(1,3,2015);
-        }
-        if (ngaySanSuat == null){
-            this.ngaySanSuat = new Ngay(2,4,2016);
-        }
-        this.maHang = maHang;
-        this.tenHang = tenHang;
+    public void setDonGia(double donGia) {
         this.donGia = donGia;
-        this.ngaySanSuat = ngaySanSuat;
-        this.ngayHetHan = ngayHetHan;
     }
-   // public boolean soSanh()
+    // public boolean soSanh()
 
     @Override
     public String toString() {

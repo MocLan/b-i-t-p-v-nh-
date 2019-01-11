@@ -4,6 +4,16 @@ public class PhanSo {
     private int tuSo;
     private int mauSo;
 
+    public PhanSo() {
+        this.tuSo = 0;
+        this.mauSo = 1;
+    }
+
+    public PhanSo(int tuSo, int mauSo) {
+        this.tuSo = tuSo;
+        this.mauSo = mauSo;
+    }
+
     public int getTuSo() {
         return tuSo;
     }
@@ -20,15 +30,7 @@ public class PhanSo {
         this.mauSo = mauSo;
     }
 
-    public PhanSo(int tuSo, int mauSo) {
-        this.tuSo = tuSo;
-        this.mauSo = mauSo;
-    }
-    public  PhanSo(){
-    this.mauSo = 1;
-    this.tuSo = 1;
-    }
-    private int timUocChungLonNhat(int x, int y) {
+    public int uocChungLonNhat(int x, int y) {
         int a;
         while (y != 0) {
             a = x % y;
@@ -37,16 +39,42 @@ public class PhanSo {
         }
         return x;
     }
-    public PhanSo timPhanSoToiGian(){
-        int uocChungLonNhat = timUocChungLonNhat(this.tuSo, this.mauSo);
-        this.tuSo /= uocChungLonNhat;
-        this.mauSo /= uocChungLonNhat;
+
+    public PhanSo rutGonPhanSo() {
+        int uocChung = uocChungLonNhat(this.tuSo, this.mauSo);
+        this.tuSo /= uocChung;
+        this.mauSo /= uocChung;
         return this;
     }
-//    public PhanSo timPhanSoNghichDao(){
-//        PhanSo phanSo = new PhanSo();
-//
-//    }
+
+    public PhanSo phanSoNghichDao() {
+        int a = this.tuSo;
+        this.tuSo = this.mauSo;
+        this.mauSo = a;
+        return this;
+    }
+
+    public PhanSo congHaiPhanSo(PhanSo phanSo1) {
+        PhanSo phanSo = new PhanSo();
+        phanSo.tuSo = this.tuSo * phanSo1.mauSo + this.mauSo * phanSo1.tuSo;
+        phanSo.mauSo = this.mauSo * phanSo1.mauSo;
+        return phanSo;
+    }
+
+    public PhanSo chiaHaiPhanSo(PhanSo phanSo1) {
+        PhanSo phanSo = new PhanSo();
+        phanSo1.phanSoNghichDao();
+        phanSo.tuSo = this.tuSo * phanSo1.tuSo;
+        phanSo.mauSo = this.mauSo * phanSo1.mauSo;
+        return phanSo;
+    }
+
+    public PhanSo truHaiPhanSo(PhanSo phanSo1) {
+        PhanSo phanSo = new PhanSo();
+        phanSo.tuSo = this.tuSo * phanSo1.mauSo - this.mauSo * phanSo1.tuSo;
+        phanSo.mauSo = this.mauSo * phanSo1.mauSo;
+        return phanSo;
+    }
 
     @Override
     public String toString() {

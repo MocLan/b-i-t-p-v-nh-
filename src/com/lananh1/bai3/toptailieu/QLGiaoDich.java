@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class QLGiaoDich {
     private GiaoDich[] danhsachGD;
     private int n;
-    private double tong1=0;
-    private double tong2=0;
+    private double tong1 = 0;
+    private double tong2 = 0;
 
     public int getN() {
         return n;
@@ -42,10 +42,11 @@ public class QLGiaoDich {
         }
     }
 
-    public  void tongThanhTien(){
+    public void tongThanhTien() {
         System.out.println("tổng thành tiền giao dịch tiền tệ là: " + tong2);
         System.out.println("tổng thành tiền giao dịch vàng là : " + tong1);
     }
+
     public void Xuat() {
         for (int i = 0; i < n; i++) {
             System.out.println(danhsachGD[i].toString());

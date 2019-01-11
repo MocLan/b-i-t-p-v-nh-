@@ -9,6 +9,10 @@ public class QLXe {
     private long tong2 = 0;
 
 
+    public QLXe() {
+        this.danhSachXe = new Xe[n];
+    }
+
     public int getN() {
         return n;
     }
@@ -17,17 +21,13 @@ public class QLXe {
         this.n = n;
     }
 
-    public QLXe() {
-        this.danhSachXe = new Xe[n];
-    }
-
     public void ThemXe() {
         int k;
         System.out.println("nhập vào số xe cần nhập: ");
         this.n = new Scanner(System.in).nextInt();
         danhSachXe = new Xe[n];
         for (int i = 0; i < n; i++) {
-            System.out.println("nhập thông tin xe thứ "+(i+1));
+            System.out.println("nhập thông tin xe thứ " + (i + 1));
             do {
                 System.out.println("nhập vào 1 nếu thêm xe ngoại thành, nhập 2 nếu thêm xe nội thành " +
                         ", nếu sai nhập lại !");

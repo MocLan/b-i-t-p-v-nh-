@@ -8,6 +8,17 @@ public class Xe {
     private String loaiXe;
     private long giaXe;
 
+    public Xe(int dungTich, String tenChuXe, String loaiXe, long giaXe) {
+        this.dungTich = dungTich;
+        this.tenChuXe = tenChuXe;
+        this.loaiXe = loaiXe;
+        this.giaXe = giaXe;
+    }
+
+    public Xe() {
+
+    }
+
     public String getTenChuXe() {
         return tenChuXe;
     }
@@ -40,17 +51,7 @@ public class Xe {
         this.dungTich = dungTich;
     }
 
-    public Xe(int dungTich, String tenChuXe, String loaiXe, long giaXe) {
-        this.dungTich = dungTich;
-        this.tenChuXe = tenChuXe;
-        this.loaiXe = loaiXe;
-        this.giaXe = giaXe;
-    }
-    public Xe(){
-
-    }
-
-    public void nhapThongTin(){
+    public void nhapThongTin() {
         System.out.println("nhập vào tên chủ xe: ");
         this.tenChuXe = new Scanner(System.in).nextLine();
         System.out.println("nhập vào loại xe: ");
@@ -61,24 +62,25 @@ public class Xe {
         this.dungTich = new Scanner(System.in).nextInt();
 
     }
-    public double tinhThue(){
-        if(dungTich < 100){
-            return  dungTich * 0.1f * giaXe;
+
+    public double tinhThue() {
+        if (dungTich < 100) {
+            return dungTich * 0.1f * giaXe;
         }
-        if(dungTich >= 100 && dungTich <= 200){
+        if (dungTich >= 100 && dungTich <= 200) {
             return dungTich * 0.3f * giaXe;
         }
-        if(dungTich > 200){
+        if (dungTich > 200) {
             return dungTich * 0.5f * giaXe;
-        }
-        else
+        } else
             return 0;
     }
+
     @Override
     public String toString() {
         return
                 String.format("%-20s%-20s%-20d%-20d%-20.2f",
-                tenChuXe,loaiXe,giaXe,dungTich,tinhThue());
+                        tenChuXe, loaiXe, giaXe, dungTich, tinhThue());
     }
 
 }

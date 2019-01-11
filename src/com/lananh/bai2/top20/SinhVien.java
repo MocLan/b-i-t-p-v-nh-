@@ -6,6 +6,20 @@ public class SinhVien {
     private float diemLT;
     private float diemTH;
 
+    public SinhVien() {
+        this.maSinhVien = 611208;
+        this.hoTen = "MocLan";
+        this.diemLT = 8.8f;
+        this.diemTH = 9.0f;
+    }
+
+    public SinhVien(int maSinhVien, String hoTen, float diemLT, float diemTH) {
+        this.maSinhVien = maSinhVien;
+        this.hoTen = hoTen;
+        this.diemLT = diemLT;
+        this.diemTH = diemTH;
+    }
+
     public int getMaSinhVien() {
         return maSinhVien;
     }
@@ -38,28 +52,15 @@ public class SinhVien {
         this.diemTH = diemTH;
 
     }
-    public  SinhVien(){
-        this.maSinhVien = 611208;
-        this.hoTen = "MocLan";
-        this.diemLT = 8.8f;
-        this.diemTH = 9.0f;
-    }
 
-
-    public SinhVien(int maSinhVien, String hoTen, float diemLT, float diemTH) {
-        this.maSinhVien = maSinhVien;
-        this.hoTen = hoTen;
-        this.diemLT = diemLT;
-        this.diemTH = diemTH;
-    }
-    public float diemTB(){
-        return (diemLT + diemTH)/2;
+    public float diemTB() {
+        return (diemLT + diemTH) / 2;
     }
 
     @Override
     public String toString() {
-       return String.format("%-20d%-20s%-20f%-20f%-20f",
-               maSinhVien,hoTen,diemLT,diemTH,diemTB());
+        return String.format("%-20d%-20s%-20f%-20f%-20f",
+                maSinhVien, hoTen, diemLT, diemTH, diemTB());
     }
 }
 

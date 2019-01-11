@@ -3,16 +3,8 @@ package com.lananh1.bai3.toptailieu;
 import java.util.Date;
 import java.util.Scanner;
 
-public class GiaoDichVang extends GiaoDich{
+public class GiaoDichVang extends GiaoDich {
     private String loaiVang;
-
-    public String getLoaiVang() {
-        return loaiVang;
-    }
-
-    public void setLoaiVang(String loaiVang) {
-        this.loaiVang = loaiVang;
-    }
 
     public GiaoDichVang(String maGiaoDich, Date ngayGiaoDich, long donGia, long soLuong, String loaiVang) {
         super(maGiaoDich, ngayGiaoDich, donGia, soLuong);
@@ -23,9 +15,17 @@ public class GiaoDichVang extends GiaoDich{
         this.loaiVang = loaiVang;
     }
 
-    public GiaoDichVang(){
+    public GiaoDichVang() {
         super();
         this.loaiVang = "9999";
+    }
+
+    public String getLoaiVang() {
+        return loaiVang;
+    }
+
+    public void setLoaiVang(String loaiVang) {
+        this.loaiVang = loaiVang;
     }
 
     @Override

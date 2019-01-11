@@ -3,9 +3,24 @@ package com.lananh1.bai5.toptailieu;
 import java.util.Date;
 import java.util.Scanner;
 
-public class KhachHangNuocNgoai extends  KhachHang {
+public class KhachHangNuocNgoai extends KhachHang {
     private String quocTich;
     private long donGia;
+
+    public KhachHangNuocNgoai(int maKhachHang, String hoVaTen, Date ngayRaHoaDon, long soDienTieuThu, String quocTich, long donGia) {
+        super(maKhachHang, hoVaTen, ngayRaHoaDon, soDienTieuThu);
+        this.quocTich = quocTich;
+        this.donGia = donGia;
+    }
+
+    public KhachHangNuocNgoai() {
+        super();
+    }
+
+    public KhachHangNuocNgoai(String quocTich, long donGia) {
+        this.quocTich = quocTich;
+        this.donGia = donGia;
+    }
 
     public String getQuocTich() {
         return quocTich;
@@ -20,20 +35,6 @@ public class KhachHangNuocNgoai extends  KhachHang {
     }
 
     public void setDonGia(long donGia) {
-        this.donGia = donGia;
-    }
-
-    public KhachHangNuocNgoai(int maKhachHang, String hoVaTen, Date ngayRaHoaDon, long soDienTieuThu, String quocTich, long donGia) {
-        super(maKhachHang, hoVaTen, ngayRaHoaDon, soDienTieuThu);
-        this.quocTich = quocTich;
-        this.donGia = donGia;
-    }
-    public KhachHangNuocNgoai(){
-        super();
-    }
-
-    public KhachHangNuocNgoai(String quocTich, long donGia) {
-        this.quocTich = quocTich;
         this.donGia = donGia;
     }
 
@@ -53,7 +54,7 @@ public class KhachHangNuocNgoai extends  KhachHang {
 
     @Override
     public String toString() {
-        return "KhachHangNuocNgoai{" +super.toString() +
+        return "KhachHangNuocNgoai{" + super.toString() +
                 "quocTich='" + quocTich + '\'' +
                 ", donGia=" + donGia +
                 '}';

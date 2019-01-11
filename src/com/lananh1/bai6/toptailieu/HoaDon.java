@@ -8,6 +8,17 @@ public class HoaDon {
     private int maPhong;
     private double donGia;
 
+    public HoaDon(int maHoaDon, String tenKhachHang, int maPhong, double donGia) {
+        this.maHoaDon = maHoaDon;
+        this.tenKhachHang = tenKhachHang;
+        this.maPhong = maPhong;
+        this.donGia = donGia;
+    }
+
+    public HoaDon() {
+
+    }
+
     public int getMaHoaDon() {
         return maHoaDon;
     }
@@ -40,26 +51,18 @@ public class HoaDon {
         this.donGia = donGia;
     }
 
-    public HoaDon(int maHoaDon, String tenKhachHang, int maPhong, double donGia) {
-        this.maHoaDon = maHoaDon;
-        this.tenKhachHang = tenKhachHang;
-        this.maPhong = maPhong;
-        this.donGia = donGia;
-    }
-    public HoaDon(){
-
-    }
-    public void nhap(){
+    public void nhap() {
         System.out.println("Nhập vào mã hóa đơn: ");
-        this.maHoaDon=new Scanner(System.in).nextInt();
+        this.maHoaDon = new Scanner(System.in).nextInt();
         System.out.println("Nhập vào tên khách hàng: ");
-        this.tenKhachHang=new Scanner(System.in).next();
+        this.tenKhachHang = new Scanner(System.in).next();
         System.out.println("Nhập vào mã phòng: ");
-        this.maPhong=new Scanner(System.in).nextInt();
+        this.maPhong = new Scanner(System.in).nextInt();
         System.out.println("Nhập vào đơn giá: ");
-        this.donGia=new Scanner(System.in).nextDouble();
+        this.donGia = new Scanner(System.in).nextDouble();
     }
-    public double tinhTien(){
+
+    public double tinhTien() {
         return 0;
     }
 

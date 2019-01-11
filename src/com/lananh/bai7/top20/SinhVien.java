@@ -8,10 +8,21 @@ public class SinhVien {
     private String diaChi;
     private long soDienThoai;
 
+    public SinhVien() {
+
+    }
+
+
+    public SinhVien(long maSinhVien, String hoTen, String diaChi, long soDienThoai) {
+        this.maSinhVien = maSinhVien;
+        this.hoTen = hoTen;
+        this.diaChi = diaChi;
+        this.soDienThoai = soDienThoai;
+    }
+
     public long getMaSinhVien() {
         return maSinhVien;
     }
-
 
     public void setMaSinhVien(long maSinhVien) {
         this.maSinhVien = maSinhVien;
@@ -40,17 +51,8 @@ public class SinhVien {
     public void setSoDienThoai(long soDienThoai) {
         this.soDienThoai = soDienThoai;
     }
-    public SinhVien(){
 
-    }
-
-    public SinhVien(long maSinhVien, String hoTen, String diaChi, long soDienThoai) {
-        this.maSinhVien = maSinhVien;
-        this.hoTen = hoTen;
-        this.diaChi = diaChi;
-        this.soDienThoai = soDienThoai;
-    }
-    public void nhap(){
+    public void nhap() {
         System.out.println("nhập vào mã sinh viên: ");
         this.maSinhVien = new Scanner(System.in).nextLong();
         System.out.println("nhập vào họ tên: ");
@@ -60,10 +62,10 @@ public class SinhVien {
         do {
             System.out.println("nhập vào số điện thoại: ");
             this.soDienThoai = new Scanner(System.in).nextLong();
-            if (soDienThoai < 1000000 || soDienThoai > 9999999 ){
+            if (soDienThoai < 1000000 || soDienThoai > 9999999) {
                 System.out.println("nhập sai yêu cầu nhập lại");
             }
-        }while (soDienThoai < 1000000 || soDienThoai > 9999999);
+        } while (soDienThoai < 1000000 || soDienThoai > 9999999);
     }
 
     @Override

@@ -12,6 +12,16 @@ public class KhachHang {
     private Date ngayRaHoaDon;
     private long soDienTieuThu;
 
+    public KhachHang(int maKhachHang, String hoVaTen, Date ngayRaHoaDon, long soDienTieuThu) {
+        this.maKhachHang = maKhachHang;
+        this.hoVaTen = hoVaTen;
+        this.ngayRaHoaDon = ngayRaHoaDon;
+        this.soDienTieuThu = soDienTieuThu;
+    }
+
+    public KhachHang() {
+    }
+
     public int getMaKhachHang() {
         return maKhachHang;
     }
@@ -44,14 +54,6 @@ public class KhachHang {
         this.soDienTieuThu = soDienTieuThu;
     }
 
-    public KhachHang(int maKhachHang, String hoVaTen, Date ngayRaHoaDon, long soDienTieuThu) {
-        this.maKhachHang = maKhachHang;
-        this.hoVaTen = hoVaTen;
-        this.ngayRaHoaDon = ngayRaHoaDon;
-        this.soDienTieuThu = soDienTieuThu;
-    }
-    public KhachHang() {
-    }
     public void nhap() {
         System.out.println("nhập vào mã khách hàng: ");
         this.maKhachHang = new Scanner(System.in).nextInt();
@@ -68,6 +70,7 @@ public class KhachHang {
             e.printStackTrace();
         }
     }
+
     public long thanhTien() {
         return 0;
     }

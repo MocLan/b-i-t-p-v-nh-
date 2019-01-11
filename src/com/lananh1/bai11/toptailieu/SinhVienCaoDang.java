@@ -2,23 +2,25 @@ package com.lananh1.bai11.toptailieu;
 
 import java.util.Scanner;
 
-public class SinhVienCaoDang extends SinhVien{
+public class SinhVienCaoDang extends SinhVien {
+    public static final int TRONG_GIO_HANH_CHINH = 1;
+    public static final int NGOAI_GIO_HANH_CHINH = 2;
     private String chuyenNganh;
     private int soTinChi;
     private int thoiGianHoc;
 
-    public static final int TRONG_GIO_HANH_CHINH = 1;
-    public static final int NGOAI_GIO_HANH_CHINH = 2;
-
     public String getChuyenNganh() {
         return chuyenNganh;
     }
+
     public void setChuyenNganh(String chuyenNganh) {
         this.chuyenNganh = chuyenNganh;
     }
+
     public int getSoTinChi() {
         return soTinChi;
     }
+
     public void setSoTinChi(int soTinChi) {
         this.soTinChi = soTinChi;
     }

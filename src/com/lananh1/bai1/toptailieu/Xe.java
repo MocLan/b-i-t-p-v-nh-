@@ -8,6 +8,21 @@ public class Xe {
     private String hoTenTaiXe;
     private long doanhThu;
 
+    public Xe(String maSoChuyen, String soXe, String hoTenTaiXe, long doanhThu) {
+        this.maSoChuyen = maSoChuyen;
+        this.soXe = soXe;
+        this.hoTenTaiXe = hoTenTaiXe;
+        this.doanhThu = doanhThu;
+    }
+
+    public Xe() {
+        this.maSoChuyen = "1a3";
+        this.soXe = "123";
+        this.hoTenTaiXe = "Nguyen Thi Lan Anh";
+        this.doanhThu = 12;
+
+    }
+
     public String getMaSoChuyen() {
         return maSoChuyen;
     }
@@ -40,20 +55,7 @@ public class Xe {
         this.doanhThu = doanhThu;
     }
 
-    public Xe(String maSoChuyen, String soXe, String hoTenTaiXe, long doanhThu) {
-        this.maSoChuyen = maSoChuyen;
-        this.soXe = soXe;
-        this.hoTenTaiXe = hoTenTaiXe;
-        this.doanhThu = doanhThu;
-    }
-    public Xe(){
-        this.maSoChuyen = "1a3";
-        this.soXe = "123";
-        this.hoTenTaiXe = "Nguyen Thi Lan Anh";
-        this.doanhThu = 12;
-
-    }
-    public void nhap(){
+    public void nhap() {
         System.out.println("nhập vào mã số chuyến xe: ");
         this.maSoChuyen = new Scanner(System.in).nextLine();
         System.out.println("nhập vào số xe: ");

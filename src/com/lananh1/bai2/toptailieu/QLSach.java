@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class QLSach {
     private Sach[] danhSachSach;
     private int n;
-    private double tong1=0;
-    private double tong2=0;
+    private double tong1 = 0;
+    private double tong2 = 0;
 
     public int getN() {
         return n;
@@ -43,24 +43,26 @@ public class QLSach {
         }
 
     }
-    public  void tongThanhTien(){
+
+    public void tongThanhTien() {
         System.out.println("tổng tiền sách tham khảo là: " + tong2);
         System.out.println("tổng tiền sách giáo khoa là: " + tong1);
     }
-    public void xuatDanhSach(){
+
+    public void xuatDanhSach() {
         for (int i = 0; i < n; i++) {
             danhSachSach[i].toString();
         }
     }
 
-    public boolean sachCanTim(){
+    public boolean sachCanTim() {
         for (int i = 0; i < n; i++) {
             if (danhSachSach[i].getNhaXuatBan().equals("x")) {
                 danhSachSach[i].toString();
             }
-        }return false;
+        }
+        return false;
     }
-
 
 
 }

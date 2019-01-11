@@ -12,6 +12,26 @@ public class GiaoDich {
     private long donGia;
     private long soLuong;
 
+    public GiaoDich(String maGiaoDich, Date ngayGiaoDich, long donGia, long soLuong) {
+        this.maGiaoDich = maGiaoDich;
+        this.ngayGiaoDich = ngayGiaoDich;
+        this.donGia = donGia;
+        this.soLuong = soLuong;
+    }
+
+    public GiaoDich() {
+        this.maGiaoDich = "";
+        //this.ngayGiaoDich = new Date();
+        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            this.ngayGiaoDich = df.parse("2/9/2018");
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        this.soLuong = 12;
+        this.donGia = 10;
+    }
+
     public String getMaGiaoDich() {
         return maGiaoDich;
     }
@@ -44,25 +64,7 @@ public class GiaoDich {
         this.soLuong = soLuong;
     }
 
-    public GiaoDich(String maGiaoDich, Date ngayGiaoDich, long donGia, long soLuong) {
-        this.maGiaoDich = maGiaoDich;
-        this.ngayGiaoDich = ngayGiaoDich;
-        this.donGia = donGia;
-        this.soLuong = soLuong;
-    }
-    public GiaoDich(){
-        this.maGiaoDich = "";
-        //this.ngayGiaoDich = new Date();
-        DateFormat df = new SimpleDateFormat("dd/MM/yyyy");
-        try {
-            this.ngayGiaoDich = df.parse("2/9/2018");
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        this.soLuong = 12;
-        this.donGia = 10;
-    }
-    public void nhapGiaoDich(){
+    public void nhapGiaoDich() {
         System.out.println("nhập vào mã giao dịch: ");
         this.maGiaoDich = new Scanner(System.in).nextLine();
         System.out.println("nhập vào ngày giao dịch: ");
@@ -79,7 +81,8 @@ public class GiaoDich {
         System.out.println("nhập vào đơn giá: ");
         this.donGia = new Scanner(System.in).nextLong();
     }
-    public double thanhTien(){
+
+    public double thanhTien() {
         return 0;
     }
 

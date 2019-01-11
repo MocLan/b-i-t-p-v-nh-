@@ -5,15 +5,17 @@ import java.util.Scanner;
 public class QLKH {
     private KhachHang[] danhSachKhachHang;
     private int n;
+
+    public QLKH() {
+        this.danhSachKhachHang = new KhachHang[n];
+    }
+
     public int getN() {
         return n;
     }
 
     public void setN(int n) {
         this.n = n;
-    }
-    public QLKH() {
-        this.danhSachKhachHang = new KhachHang[n];
     }
 
     public void Them() {
@@ -22,7 +24,7 @@ public class QLKH {
         this.n = new Scanner(System.in).nextInt();
         danhSachKhachHang = new KhachHang[n];
         for (int i = 0; i < n; i++) {
-            System.out.println("nhập thông tin khách hàng thứ "+(i+1));
+            System.out.println("nhập thông tin khách hàng thứ " + (i + 1));
             do {
                 System.out.println("nhập vào 1 nếu thêm khách nước ngoài , nhập 2 nếu thêm khách việt" +
                         ", nếu sai nhập lại !");
@@ -40,20 +42,22 @@ public class QLKH {
             }
         }
     }
-    public long tinhTrungBinhHoaDonNguoiViet(){
-        int tong =0;
-        int dem =0;
+
+    public long tinhTrungBinhHoaDonNguoiViet() {
+        int tong = 0;
+        int dem = 0;
         for (KhachHang khachHang : danhSachKhachHang) {
             if (khachHang instanceof KhachHangVietNam) {
                 tong += khachHang.thanhTien();
-                dem ++;
+                dem++;
             }
         }
         if (dem == 0) {
-            return tong/dem;
+            return tong / dem;
         }
         return 0;
     }
+
     public void Xuat() {
         for (int i = 0; i < n; i++) {
             System.out.println(danhSachKhachHang[i].toString());

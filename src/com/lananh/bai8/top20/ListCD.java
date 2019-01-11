@@ -3,44 +3,49 @@ package com.lananh.bai8.top20;
 public class ListCD {
     private CD[] listCD;
     private int n;
-    public ListCD(int n){
+
+    public ListCD(int n) {
         this.n = n;
-        this.listCD = new CD[n] ;
+        this.listCD = new CD[n];
     }
-    public boolean them(CD cd){
-        if(listCD[this.n-1] != null){
+
+    public boolean them(CD cd) {
+        if (listCD[this.n - 1] != null) {
             return false;
         }
         for (int i = 0; i < listCD.length; i++) {
-            if (listCD[i].getMaCD()==cd.getMaCD()){
+            if (listCD[i].getMaCD() == cd.getMaCD()) {
                 return false;
             }
         }
-        for (int i = 0; i <listCD.length ; i++) {
-            if (listCD[i] == null){
+        for (int i = 0; i < listCD.length; i++) {
+            if (listCD[i] == null) {
                 listCD[i] = cd;
                 break;
             }
         }
         return true;
     }
-    public int count(){
-        int dem =0;
-        for (int i = 0; i <listCD.length ; i++) {
-            if (listCD[i] != null){
-                dem ++;
+
+    public int count() {
+        int dem = 0;
+        for (int i = 0; i < listCD.length; i++) {
+            if (listCD[i] != null) {
+                dem++;
             }
         }
         return dem;
     }
-    public double tongGiaCD(){
+
+    public double tongGiaCD() {
         double tong = 0;
-        for (int i = 0; i <listCD.length ; i++) {
-           tong += listCD[i].getGiaThanh();
+        for (int i = 0; i < listCD.length; i++) {
+            tong += listCD[i].getGiaThanh();
         }
         return tong;
     }
-    public void sapXepGiamDan(){
+
+    public void sapXepGiamDan() {
         for (int i = 0; i < listCD.length; i++) {
 
 

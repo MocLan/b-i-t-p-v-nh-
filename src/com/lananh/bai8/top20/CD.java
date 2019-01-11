@@ -7,6 +7,18 @@ public class CD {
     private int soBaiHat;
     private float giaThanh;
 
+    public CD() {
+
+    }
+
+    public CD(int maCD, String tuaCD, String caSi, int soBaiHat, float giaThanh) {
+        this.maCD = maCD;
+        this.tuaCD = tuaCD;
+        this.caSi = caSi;
+        this.soBaiHat = soBaiHat;
+        this.giaThanh = giaThanh;
+    }
+
     public int getMaCD() {
         return maCD;
     }
@@ -44,18 +56,6 @@ public class CD {
     }
 
     public void setGiaThanh(float giaThanh) {
-        this.giaThanh = giaThanh;
-    }
-    public CD(){
-
-    }
-
-
-    public CD(int maCD, String tuaCD, String caSi, int soBaiHat, float giaThanh) {
-        this.maCD = maCD;
-        this.tuaCD = tuaCD;
-        this.caSi = caSi;
-        this.soBaiHat = soBaiHat;
         this.giaThanh = giaThanh;
     }
 

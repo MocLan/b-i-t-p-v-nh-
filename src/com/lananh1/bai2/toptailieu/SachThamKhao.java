@@ -1,20 +1,10 @@
 package com.lananh1.bai2.toptailieu;
 
-import com.lananh1.bai2.toptailieu.Sach;
-
 import java.util.Date;
 import java.util.Scanner;
 
 public class SachThamKhao extends Sach {
     private double thue;
-
-    public double getThue() {
-        return thue;
-    }
-
-    public void setThue(double thue) {
-        this.thue = thue;
-    }
 
     public SachThamKhao(String maSach, Date ngayNhap, long donGia, int soLuong, String nhaXuatBan, double thue) {
         super(maSach, ngayNhap, donGia, soLuong, nhaXuatBan);
@@ -27,6 +17,14 @@ public class SachThamKhao extends Sach {
 
     public SachThamKhao() {
         super();
+    }
+
+    public double getThue() {
+        return thue;
+    }
+
+    public void setThue(double thue) {
+        this.thue = thue;
     }
 
     @Override

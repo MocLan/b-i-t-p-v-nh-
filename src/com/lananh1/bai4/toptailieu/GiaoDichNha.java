@@ -7,21 +7,6 @@ public class GiaoDichNha extends GiaoDich {
     private int loaiNha;
     private String diaChi;
 
-    public int getLoaiNha() {
-        return loaiNha;
-    }
-
-    public void setLoaiNha(int loaiNha) {
-        this.loaiNha = loaiNha;
-    }
-
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
     public GiaoDichNha() {
         super();
         this.loaiNha = 0;
@@ -36,6 +21,22 @@ public class GiaoDichNha extends GiaoDich {
     public GiaoDichNha(int maGiaoDich, Date ngayGiaoDich, long donGia, double dienTich, int loaiNha, String diaChi) {
         super(maGiaoDich, ngayGiaoDich, donGia, dienTich);
         this.loaiNha = loaiNha;
+        this.diaChi = diaChi;
+    }
+
+    public int getLoaiNha() {
+        return loaiNha;
+    }
+
+    public void setLoaiNha(int loaiNha) {
+        this.loaiNha = loaiNha;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
         this.diaChi = diaChi;
     }
 

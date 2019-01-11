@@ -6,39 +6,13 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class SinhVien {
+    public static final int TRUNG_CAP = 1;
+    public static final int CAO_DANG = 2;
+    public static final int DAI_HOC = 3;
     private String ten;
     private String maSinhVien;
     private Date ngayNhapHoc;
     private int heDaiHoc;
-
-    public static final int TRUNG_CAP = 1;
-    public static final int CAO_DANG = 2;
-    public static final int DAI_HOC = 3;
-
-    public String getTen() {
-        return ten;
-    }
-    public void setTen(String ten) {
-        this.ten = ten;
-    }
-    public String getMaSinhVien() {
-        return maSinhVien;
-    }
-    public void setMaSinhVien(String maSinhVien) {
-        this.maSinhVien = maSinhVien;
-    }
-    public Date getNgayNhapHoc() {
-        return ngayNhapHoc;
-    }
-    public void setNgayNhapHoc(Date ngayNhapHoc) {
-        this.ngayNhapHoc = ngayNhapHoc;
-    }
-    public int getHeDaiHoc() {
-        return heDaiHoc;
-    }
-    public void setHeDaiHoc(int heDaiHoc) {
-        this.heDaiHoc = heDaiHoc;
-    }
 
     public SinhVien() {
         this.ten = "";
@@ -50,6 +24,38 @@ public class SinhVien {
         this.ten = ten;
         this.maSinhVien = maSV;
         this.heDaiHoc = heDH;
+    }
+
+    public String getTen() {
+        return ten;
+    }
+
+    public void setTen(String ten) {
+        this.ten = ten;
+    }
+
+    public String getMaSinhVien() {
+        return maSinhVien;
+    }
+
+    public void setMaSinhVien(String maSinhVien) {
+        this.maSinhVien = maSinhVien;
+    }
+
+    public Date getNgayNhapHoc() {
+        return ngayNhapHoc;
+    }
+
+    public void setNgayNhapHoc(Date ngayNhapHoc) {
+        this.ngayNhapHoc = ngayNhapHoc;
+    }
+
+    public int getHeDaiHoc() {
+        return heDaiHoc;
+    }
+
+    public void setHeDaiHoc(int heDaiHoc) {
+        this.heDaiHoc = heDaiHoc;
     }
 
     public void chonHeDaiHoc() {

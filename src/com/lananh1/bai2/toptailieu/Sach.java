@@ -12,6 +12,18 @@ public class Sach {
     private int soLuong;
     private String nhaXuatBan;
 
+    public Sach(String maSach, Date ngayNhap, long donGia, int soLuong, String nhaXuatBan) {
+        this.maSach = maSach;
+        this.ngayNhap = ngayNhap;
+        this.donGia = donGia;
+        this.soLuong = soLuong;
+        this.nhaXuatBan = nhaXuatBan;
+    }
+
+    public Sach() {
+
+    }
+
     public String getMaSach() {
         return maSach;
     }
@@ -52,38 +64,28 @@ public class Sach {
         this.nhaXuatBan = nhaXuatBan;
     }
 
-    public Sach(String maSach, Date ngayNhap, long donGia, int soLuong, String nhaXuatBan) {
-        this.maSach = maSach;
-        this.ngayNhap = ngayNhap;
-        this.donGia = donGia;
-        this.soLuong = soLuong;
-        this.nhaXuatBan = nhaXuatBan;
+    public void nhap() {
+        System.out.println("nhập vào mã sách: ");
+        this.maSach = new Scanner(System.in).nextLine();
+        System.out.println("nhập vào đơn giá: ");
+        this.donGia = new Scanner(System.in).nextLong();
+        System.out.println("nhập vào số lượng sách: ");
+        this.soLuong = new Scanner(System.in).nextInt();
+        System.out.println("nhập vào tên nhà xuất bản: ");
+        this.nhaXuatBan = new Scanner(System.in).nextLine();
+        System.out.println("nhập vào ngày nhập sách: ");
+        String ngay = new Scanner(System.in).nextLine();
+        DateFormat df = new SimpleDateFormat("dd/mm/yy");
+        try {
+            this.ngayNhap = df.parse(ngay);
+        } catch (Exception e) {
+
+        }
     }
-     public  Sach(){
 
-     }
-
-     public  void nhap(){
-         System.out.println("nhập vào mã sách: ");
-         this.maSach = new Scanner(System.in).nextLine();
-         System.out.println("nhập vào đơn giá: ");
-         this.donGia = new Scanner(System.in).nextLong();
-         System.out.println("nhập vào số lượng sách: ");
-         this.soLuong = new Scanner(System.in).nextInt();
-         System.out.println("nhập vào tên nhà xuất bản: ");
-         this.nhaXuatBan = new Scanner(System.in).nextLine();
-         System.out.println("nhập vào ngày nhập sách: ");
-         String ngay = new Scanner(System.in).nextLine();
-         DateFormat df = new SimpleDateFormat("dd/mm/yy");
-         try {
-             this.ngayNhap = df.parse(ngay);
-         }catch (Exception e){
-
-         }
-     }
-     public double thanhTien(){
+    public double thanhTien() {
         return 0;
-     }
+    }
 
     @Override
     public String toString() {
